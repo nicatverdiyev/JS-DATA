@@ -401,3 +401,30 @@ products.forEach(item => productsElem.innerHTML += `
 </div> ` );
 
 // --------forEach İLE İŞLEME-----END--
+
+
+// ------FİLTER METHOD-----START----
+
+// const inputElem = document.getElementById("searchProduct")
+// inputElem.addEventListener("keyup", ()=> {
+//     console.log(inputElem.value);
+// })
+
+// -----ARRAY-i FİLTER ETHME MEHTODU--start---
+
+const inputElem = document.getElementById("searchProduct")
+inputElem.addEventListener("keyup", ()=> {
+    // Filter etme
+let filteredProduct = products.filter(item => item.title.toLowerCase().includes(inputElem.value.toLowerCase()))
+
+productsElem.innerHTML =""
+filteredProduct.forEach(item => productsElem.innerHTML += `  
+<div class="product">
+    <img src="${item.thumbnail}" alt="" />
+    <h4>${item.title}</h4>
+    <p>${item.description}</p>
+    <p>${item.price} AZN</p>
+</div> ` );
+})
+// -----ARRAY-i FİLTER ETHME MEHTODU--end---
+// ------FİLTER METHOD-----END----

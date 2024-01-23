@@ -1,7 +1,4 @@
 .products {
-  width: 95%;
-  max-width: 1320px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -16,4 +13,19 @@ img {
   color: white;
   box-sizing: border-box;
   border-radius: 20px;
+}
+#wrapper {
+  width: 95%;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  width: 50%;
+  padding: 15px 30px;
+  border: 1px solid rgba(48, 21, 202, 0.676);
+  margin-block: 40px;
+  outline: none;
 }
