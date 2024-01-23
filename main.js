@@ -371,15 +371,33 @@ let products = [
         {"id":27,"title":"Flying Wooden Bird","description":"Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm","price":51,"discountPercentage":15.58,"rating":4.41,"stock":17,"brand":"Flying Wooden","category":"home-decoration","thumbnail":"https://cdn.dummyjson.com/product-images/27/thumbnail.webp","images":["https://cdn.dummyjson.com/product-images/27/1.jpg","https://cdn.dummyjson.com/product-images/27/2.jpg","https://cdn.dummyjson.com/product-images/27/3.jpg","https://cdn.dummyjson.com/product-images/27/4.jpg","https://cdn.dummyjson.com/product-images/27/thumbnail.webp"]},{"id":28,"title":"3D Embellishment Art Lamp","description":"3D led lamp sticker Wall sticker 3d wall art light on/off button  cell operated (included)","price":20,"discountPercentage":16.49,"rating":4.82,"stock":54,"brand":"LED Lights","category":"home-decoration","thumbnail":"https://cdn.dummyjson.com/product-images/28/thumbnail.jpg","images":["https://cdn.dummyjson.com/product-images/28/1.jpg","https://cdn.dummyjson.com/product-images/28/2.jpg","https://cdn.dummyjson.com/product-images/28/3.png","https://cdn.dummyjson.com/product-images/28/4.jpg","https://cdn.dummyjson.com/product-images/28/thumbnail.jpg"]},{"id":29,"title":"Handcraft Chinese style","description":"Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate","price":60,"discountPercentage":15.34,"rating":4.44,"stock":7,"brand":"luxury palace","category":"home-decoration","thumbnail":"https://cdn.dummyjson.com/product-images/29/thumbnail.webp","images":["https://cdn.dummyjson.com/product-images/29/1.jpg","https://cdn.dummyjson.com/product-images/29/2.jpg","https://cdn.dummyjson.com/product-images/29/3.webp","https://cdn.dummyjson.com/product-images/29/4.webp","https://cdn.dummyjson.com/product-images/29/thumbnail.webp"]},{"id":30,"title":"Key Holder","description":"Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality","price":30,"discountPercentage":2.92,"rating":4.92,"stock":54,"brand":"Golden","category":"home-decoration","thumbnail":"https://cdn.dummyjson.com/product-images/30/thumbnail.jpg","images":["https://cdn.dummyjson.com/product-images/30/1.jpg","https://cdn.dummyjson.com/product-images/30/2.jpg","https://cdn.dummyjson.com/product-images/30/3.jpg","https://cdn.dummyjson.com/product-images/30/thumbnail.jpg"]}]
 
 
+
+
+// ----------FOR İLE İŞLEME-----START----
+// const productsElem = document.querySelector(".products");
+
+// for (let i = 0; i < products.length; i++) {
+//     productsElem.innerHTML += `  
+//         <div class="product">
+//             <img src="${products[i].thumbnail}" alt="" />
+//             <h4>${products[i].title}</h4>
+//             <p>${products[i].description}</p>
+//             <p>${products[i].price} AZN</p>
+//         </div> `  
+// }
+// ----------FOR İLE İŞLEME-----END----
+
+
+
+// --------forEach İLE İŞLEME-----START--
 const productsElem = document.querySelector(".products");
 
-for (let i = 0; i < products.length; i++) {
-    productsElem.innerHTML += `  
-        <div class="product">
-            <img src="${products[i].thumbnail}" alt="" />
-            <h4>${products[i].title}</h4>
-            <p>${products[i].description}</p>
-            <p>${products[i].price}</p>
-        </div> `
-    
-}
+products.forEach(item => productsElem.innerHTML += `  
+<div class="product">
+    <img src="${item.thumbnail}" alt="" />
+    <h4>${item.title}</h4>
+    <p>${item.description}</p>
+    <p>${item.price} AZN</p>
+</div> ` );
+
+// --------forEach İLE İŞLEME-----END--
